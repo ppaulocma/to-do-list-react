@@ -8,6 +8,6 @@ class Application extends Controller
 {
    public function index()
    {
-      return self::render('index', ['REPLACE_TEST' => 'Olá Mundo!']);
+      return self::render('index', ['URL_BASE' => URL_BASE]);
    }
 }

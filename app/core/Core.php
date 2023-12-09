@@ -2,12 +2,14 @@
 
 use Exception;
 
-class Core {
+class Core
+{
     private $controller;
     private $method;
     private $parameters = [];
 
-    public function __construct() {
+    public function __construct()
+    {
         $url = array_filter(explode('/', end(explode("index.php", $_SERVER["PHP_SELF"]))));
 
         $this->controller = ucfirst(array_shift($url) ?? 'application');
@@ -15,7 +17,8 @@ class Core {
         $this->parameters = $url;
     }
 
-    public function run() {
+    public function run()
+    {
         try {
             $currentController = "app\\controllers\\" . $this->controller;
             $return = call_user_func_array([new $currentController, $this->method], $this->parameters);

@@ -5,4 +5,4 @@
     define("DB_PASSWORD", "");
     define("CHARSET","UTF8");
 
-    define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"] ."/teste-ipm");
+    define('URL_BASE', 'http://' . $_SERVER["HTTP_HOST"] ."/to-do-list-react");
