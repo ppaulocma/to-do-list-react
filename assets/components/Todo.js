@@ -44,6 +44,7 @@ const TodoApp = () => {
                         updatedTodos[
                             todos.indexOf(todos.find((todo) => todo.id === index))
                         ] = todoData;
+                        todoData.date_created = new Date().toJSON().slice(0,10).replace(/-/g,'-');
                         setTodos(updatedTodos);
                         setIndex(null);
                     })
